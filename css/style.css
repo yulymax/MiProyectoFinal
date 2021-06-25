@@ -1,65 +1,95 @@
-/* correspomde a la pagina index*/
-body {
-  margin: 0;
+/*----------INDEX-------*/
+.carousel-item .carousel-item__contenedorTexto {
+  position: absolute;
+  z-index: 1;
 }
-
-#miGranCaja {
-  display: flex;
-  flex-direction: column;
-  background-image: url(/imagenes/fondo/2.jpg);
-  background-size: cover;
+.carousel-item .carousel-item__contenedorTexto .carousel-item__texto {
+  font-size: 9vw;
 }
-
-.miEncabezado {
-  font-family: "Texturina", serif;
-  color: #4c4a4d;
-  font-weight: bold;
-  font-size: 24px;
-  text-align-last: center;
-  background-image: url(/imagenes/Logo/logo3.jpg);
-  background-size: cover;
-  border: 1px solid white;
-}
-
-/*Aplique gradiente*/
-#Menut {
-  background: radial-gradient(circle, #aadcec, #1e1f1f);
-  height: 100px;
-}
-.miMenu {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  justify-content: space-around;
-  height: 100px;
-}
-.miMenu li {
-  border-right: 1px solid white;
+.btn-coffee,
+.btn-coffee--white {
+  cursor: pointer;
   text-align: center;
-  width: 20%;
-  font-size: 22px;
-  font-family: "Texturina", serif;
-}
-.miMenu li a {
+  text-decoration: none;
   color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px 17px;
+  border: 2px #959292 solid;
+  border-radius: 0.25rem;
+  background: radial-gradient(rgb(128, 125, 125), black);
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  font-family: "Lora", serif;
 }
-/*Transformacion en menu*/
-.miMenu li a:hover {
-  background-color: #4b9ab4;
-  transform: scale(1, 1);
+.carousel-item .carousel-item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), black);
+  z-index: 0;
 }
-
-.miMenu li:last-child {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
   border: 0;
 }
-
-.miSection {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 0px;
+/*Pie de pagina*/
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Lora", serif;
 }
+/*----CONOCENOS----*/
+header.masthead {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  color: rgba(173, 173, 173, 0.979);
+  text-align: center;
+  font-family: "Lora", serif;
+}
+
+header.masthead .page-heading h1,
+header.masthead .page-heading .h1,
+header.masthead .site-heading h1,
+header.masthead .site-heading .h1 {
+  font-size: 3.5rem;
+  font-family: "Lora", serif;
+}
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.header {
+  color: #161616;
+  font-size: 30px;
+  padding: 10px;
+  text-align: left;
+}
+/*section de conocenos*/
 .miImagen {
   display: flex;
   align-items: center;
@@ -67,7 +97,7 @@ body {
 }
 
 .nosotras {
-  font-family: "Texturina", serif;
+  font-family: "Lora", serif;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -77,47 +107,64 @@ body {
 }
 
 .nosotras p {
-  font-family: "Texturina", serif;
+  font-family: "Lora", serif;
   font-style: italic;
   line-height: 2;
   font-size: 20px;
   text-align: justify;
   font-weight: bold;
 }
-
-.miAside {
-  width: 400px;
-  font-family: "Texturina", serif;
+/*----CONTACTO----*/
+section#contacto {
+  background-color: black;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+section#contacto .section-heading {
+  color: #fff;
+  font-size: 40px;
+  line-height: 3.5;
+  font-family: "Lora", serif;
+}
+.page-section h3.section-subheading,
+.page-section .section-subheading.h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lora", serif;
+  margin-bottom: 4rem;
+}
+section#contacto form#contactForm .form-group {
+  margin-bottom: 1.5rem;
+}
+section#contacto form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  padding: 1.25rem;
+}
+section#contacto form#contactForm .form-group-textarea {
+  height: 100%;
+}
+section#contacto form#contactForm .form-group-textarea textarea {
+  height: 100%;
+  min-height: 10rem;
+}
+section#contacto form#contactForm .form-group input,
+section#contact form#contactForm .form-group textarea {
+  padding: 1.25rem;
+}
+section#contacto button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*----CURSOS----*/
+.tituloCurso {
+  font-family: "Lora", serif;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-}
-/* aca agregue Gradiente*/
-footer {
-  background: radial-gradient(circle, #aadcec, #030303);
-  height: 150px;
-}
-footer span {
-  font-family: "Texturina", serif;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 8px 20px 0px 20px;
-  padding: 10px;
-  color: white;
-}
-.Whasapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  opacity: 0.8;
-}
-/*Corresponde a la pagina cursos*/
-.tituloCurso {
-  font-family: "Texturina", serif;
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
   text-decoration: underline;
+  margin-bottom: 50px;
 }
 #miCursos {
   display: flex;
@@ -151,7 +198,6 @@ footer span {
   flex: 1;
 }
 .canasto {
-  width: 100px;
   background-color: rgb(5, 143, 143);
   border: black 1px solid;
   color: rgb(248, 248, 248);
@@ -159,8 +205,8 @@ footer span {
   font-size: 20px;
   padding: 2px 5px 2px 80px;
 }
+/*----NUESTROS PROYECTOS----*/
 
-/* corresponde a  la pagina Nuestros Proyectos,transformacion*/
 #cajaGrid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -228,98 +274,9 @@ footer span {
   justify-self: center;
   border: 4px double black;
   width: 100%;
-  font-family: "Texturina", serif;
+  font-family: "Lora", serif;
   line-height: 2;
   font-size: 19px;
-  text-align: center;
-  font-weight: bold;
-}
-/*corresponde a la pagin Patrones Gratis*/
-#patrones {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  align-items: stretch;
-  justify-items: stretch;
-  margin-bottom: 50px;
-  margin-left: 20px;
-}
-#patrones img {
-  border: 2px solid rgb(48, 47, 47);
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  width: 370px;
-  height: 500px;
-}
-
-/* corresponde a la pagina  contacto*/
-form {
-  width: 300px;
-  padding: 16px;
-  border-radius: 10px;
-  margin: auto;
-  background-color: #ccc;
-  margin-bottom: 50px;
-}
-
-form label {
-  width: 72px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-form input[type="text"],
-form input[type="email"] {
-  width: 180px;
-  padding: 3px 10px;
-  border: 1px solid #f6f6f6;
-  border-radius: 3px;
-  background-color: #f6f6f6;
-  margin: 8px 0;
-  display: inline-block;
-}
-
-form input[type="submit"],
-form input[type="reset"] {
-  width: 100%;
-  padding: 8px 16px;
-  margin-top: 32px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  display: block;
-  color: #fff;
-  background-color: #000;
-}
-
-form input[type="submit"]:hover {
-  cursor: pointer;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  border: 1px solid #f6f6f6;
-  border-radius: 3px;
-  background-color: #f6f6f6;
-  margin: 8px 0;
-  resize: none;
-  display: block;
-}
-.formulario {
-  font-family: "Texturina", serif;
-  font-size: 14px;
-  font-weight: bold;
-}
-.formulario h2 {
-  font-family: "Texturina", serif;
-  line-height: 2;
-  font-size: 35px;
-  text-align: center;
-  font-weight: bold;
-}
-.formulario h5 {
-  font-family: "Texturina", serif;
-  line-height: 2;
-  font-size: 22px;
   text-align: center;
   font-weight: bold;
 }
