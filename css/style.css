@@ -49,8 +49,9 @@
 /*Pie de pagina*/
 .footer {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 20px;
   font-family: "Lora", serif;
+  font-weight: bold;
 }
 /*----CONOCENOS----*/
 header.masthead {
@@ -65,23 +66,25 @@ header.masthead {
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
-  color: rgba(173, 173, 173, 0.979);
+  color: rgb(116, 112, 112);
   text-align: center;
   font-family: "Lora", serif;
+  font-weight: bold;
 }
 
 header.masthead .page-heading h1,
 header.masthead .page-heading .h1,
 header.masthead .site-heading h1,
 header.masthead .site-heading .h1 {
-  font-size: 3.5rem;
+  font-size: 60px;
   font-family: "Lora", serif;
+  padding-bottom: 30px;
 }
 header.masthead .page-heading .subheading,
 header.masthead .site-heading .subheading {
-  font-size: 2.5rem;
+  font-size: 35px;
+  font-family: "Lora", serif;
   line-height: 1.5;
-  font-weight: bold;
 }
 .header {
   color: #161616;
@@ -90,30 +93,43 @@ header.masthead .site-heading .subheading {
   text-align: left;
 }
 /*section de conocenos*/
-.miImagen {
-  display: flex;
-  align-items: center;
-  margin: 0 5px;
+.sectiontitle {
+  width: 100%;
+  margin-top: 55px;
+  margin-bottom: 75px;
 }
-
-.nosotras {
+.sectiontitle__title {
   font-family: "Lora", serif;
-  font-size: 30px;
-  font-weight: bold;
+  color: #070707;
   text-align: center;
-  flex: 1;
+  font-size: 50px;
+  padding: 20px;
+}
+.sectiontitle__subtitle {
+  font-size: 20px;
+  color: black;
+  font-family: "Lora", serif;
+  text-align: center;
+}
+.quienes_description {
+  padding-top: 5%;
+  padding-bottom: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(140, 136, 138, 0.773546918767507) 0%,
+    rgba(54, 55, 56, 1) 100%
+  );
+}
+.quienes_description-foto {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+}
+.quienes_description-texto {
+  font-size: 20px;
+  font-family: "Lora", serif;
+  color: white;
 }
 
-.nosotras p {
-  font-family: "Lora", serif;
-  font-style: italic;
-  line-height: 2;
-  font-size: 20px;
-  text-align: justify;
-  font-weight: bold;
-}
 /*----CONTACTO----*/
 section#contacto {
   background-color: black;
@@ -158,14 +174,7 @@ section#contacto button {
   margin-bottom: 30px;
 }
 /*----CURSOS----*/
-.tituloCurso {
-  font-family: "Lora", serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: underline;
-  margin-bottom: 50px;
-}
+
 #miCursos {
   display: flex;
   flex-direction: row;
@@ -206,77 +215,68 @@ section#contacto button {
   padding: 2px 5px 2px 80px;
 }
 /*----NUESTROS PROYECTOS----*/
-
-#cajaGrid {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-auto-rows: 300px 300px 300px 300px;
-  grid-template-areas:
-    "cajaUno cajaCuatro cajaCinco"
-    "cajaDos cajaCuatro cajaCinco"
-    "cajaTres cajaCuatro cajaCinco";
-  column-gap: 30px;
-  row-gap: 10px;
-  width: 1200px;
-  margin: 0 auto;
+#portfolio {
+  background: radial-gradient(
+    circle,
+    rgba(140, 136, 138, 0.773546918767507) 0%,
+    rgba(54, 55, 56, 1) 100%
+  );
 }
-#cajaUno {
-  grid-area: cajaUno;
+.page-section {
+  padding: 6rem 0;
 }
-
-#cajaUno img {
-  width: 100%;
-  border: 4px double black;
-  align-self: end;
-}
-#cajaUno :hover {
-  transition: all 1.5s;
-  transform: scale(2, 2);
-}
-#cajaDos {
-  grid-area: cajaDos;
-}
-#cajaDos img {
-  width: 100%;
-  border: 4px double black;
-}
-#cajaDos :hover {
-  transition: all 1.5s;
-  transform: scale(2, 2);
-}
-#cajaTres {
-  grid-area: cajaTres;
-}
-#cajaTres img {
-  width: 100%;
-  border: 4px double black;
-}
-#cajaTres :hover {
-  transition: all 1.5s;
-  transform: scale(2, 2);
-}
-#cajaCuatro {
-  grid-area: cajaCuatro;
-  justify-self: stretch;
-  align-self: center;
-}
-
-#cajaCuatro iframe {
-  border: 4px double black;
-  width: 100%;
-  justify-self: center;
-  height: 400px;
-}
-#cajaCinco {
-  grid-area: cajaCinco;
-}
-#cajaCinco p {
-  justify-self: center;
-  border: 4px double black;
-  width: 100%;
+.page-section .page-section-heading {
+  font-size: 2.25rem;
+  line-height: 3rem;
+  padding-bottom: 45px;
   font-family: "Lora", serif;
-  line-height: 2;
-  font-size: 19px;
-  text-align: center;
-  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  .page-section .page-section-heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+.portfolio .portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(26, 188, 156, 0.9);
+}
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+.portfolio
+  .portfolio-item
+  .portfolio-item-caption
+  .portfolio-item-caption-content {
+  font-size: 1.5rem;
+}
+
+.portfolio-modal .btn-close {
+  color: #1abc9c;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.portfolio-modal .portfolio-modal-title {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-modal .portfolio-modal-title {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
 }
