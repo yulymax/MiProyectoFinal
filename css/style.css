@@ -174,46 +174,54 @@ section#contacto button {
   margin-bottom: 30px;
 }
 /*----CURSOS----*/
-
-#miCursos {
+.cardsPadre {
+  margin-top: 80px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(140, 136, 138, 0.773546918767507) 0%,
+    rgba(54, 55, 56, 1) 100%
+  );
+}
+
+.cards {
+  display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
-}
-.curso {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(244, 248, 248);
-  width: 350px;
-  height: 650px;
-}
-.curso img {
-  width: 100%;
-  border-radius: 6px;
-}
-.descripcion {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-}
-.descripcion h2 {
-  margin: 0;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
-.descripcion p {
-  flex: 1;
+.card {
+  flex: 0 0 300px;
+  margin: 0 10px 10px 10px;
+  border: 2px solid rgb(5, 5, 5);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  background: white;
 }
-.canasto {
-  background-color: rgb(5, 143, 143);
-  border: black 1px solid;
-  color: rgb(248, 248, 248);
-  font-weight: bold;
-  font-size: 20px;
-  padding: 2px 5px 2px 80px;
+.card img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
 }
+.card .text {
+  padding: 0 30px 30px;
+  font-family: "Lora", serif;
+}
+.card .text > button {
+  width: 100%;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+.btn {
+  background: #333;
+}
+
 /*----NUESTROS PROYECTOS----*/
 #portfolio {
   background: radial-gradient(
@@ -247,6 +255,26 @@ section#contacto button {
   border-radius: 0.5rem;
   overflow: hidden;
 }
+.modal.fade .modal-dialog {
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+.portfolio-modal .modal-dialog .modal-content {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+
+.portfolio-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
 .portfolio .portfolio-item .portfolio-item-caption {
   position: absolute;
   top: 0;
@@ -279,4 +307,66 @@ section#contacto button {
     font-size: 3rem;
     line-height: 2.5rem;
   }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.portfolio-modal .modal-dialog .modal-content h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+.portfolio-modal .modal-dialog .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+
+.portfolio-modal .modal-content img {
+  margin-bottom: 2rem;
+}
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important;
+}
+.d-block {
+  display: block !important;
+}
+
+.portfolio-modal .modal-dialog .modal-content p {
+  margin-bottom: 2rem;
+}
+.portfolio-modal .modal-content p {
+  margin-bottom: 2rem;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #333;
+  color: white;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  color: #fffffe;
 }
