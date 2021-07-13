@@ -1,0 +1,25 @@
+#miHeader {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-size: cover;
+  .site-heading {
+    color: $color-titulos;
+    text-align: center;
+    font: $titulo-font;
+
+    h1 {
+      font: $titulo-font;
+      padding-bottom: 30px;
+    }
+  }
+}
+@mixin subtitulo($tamanosubtitulo, $estiloparrafo) {
+  font-size: $tamanosubtitulo;
+  font-family: $estiloparrafo;
+}
+#miHeader .subheading {
+  @include subtitulo(33px, "Martel, serif");
+}

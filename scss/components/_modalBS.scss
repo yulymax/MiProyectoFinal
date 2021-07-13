@@ -1,0 +1,27 @@
+.portfolio-modal .modal-dialog {
+  max-width: 80vw;
+
+  .modal-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    .modal-content h2 {
+      font: $titulo-font;
+      line-height: 3rem;
+    }
+  }
+}
+.portfolio-modal .modal-content img {
+  margin-bottom: 15px;
+  border: 2px solid gray;
+}
+
+.portfolio-modal .modal-dialog .modal-content p {
+  margin-bottom: 30px;
+  font-style: italic;
+  font: $parrafo-font;
+  .item-intro {
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+}

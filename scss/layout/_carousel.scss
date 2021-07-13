@@ -1,0 +1,29 @@
+.carousel-item {
+  .carousel-item__contenedorTexto {
+    position: absolute;
+    z-index: 1;
+    font: $parrafo-font;
+  }
+}
+
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+}
+.carousel-control-prev-icon {
+  @extend.carousel-control-next-icon;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
