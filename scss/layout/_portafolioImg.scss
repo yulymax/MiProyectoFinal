@@ -1,4 +1,4 @@
-#portfolio {
+.portfolio {
   background: $fondo-section;
   .portfolio-item {
     cursor: pointer;
@@ -7,12 +7,8 @@
     max-width: 25rem;
     border-radius: 0.5rem;
     overflow: hidden;
-
-    .portfolio-item-caption:hover {
-      opacity: 1;
-      .portfolio-item-caption-content {
-        font-size: 1.5rem;
-      }
+    .portfolio-item-caption-content {
+      font-size: 1.5rem;
     }
   }
 }
@@ -23,6 +19,9 @@
   transition: all 0.2s ease-in-out;
   opacity: 0;
   background-color: rgba(26, 188, 156, 0.9);
+  &:hover {
+    opacity: 1;
+  }
 }
 .page-section {
   padding: 6rem 0;

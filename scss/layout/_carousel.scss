@@ -6,14 +6,12 @@
   }
 }
 
-.carousel-control-next-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   display: inline-block;
   width: 60px;
   height: 60px;
   background-color: black;
-}
-.carousel-control-prev-icon {
-  @extend.carousel-control-next-icon;
 }
 
 .sr-only {

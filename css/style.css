@@ -147,13 +147,23 @@ footer {
   background: white;
   transition: all 4s;
 }
-.card .card img {
+.card:hover {
+  background-color: #c6f5f5;
+}
+.card img {
   width: 100%;
   max-width: 350px;
   height: auto;
 }
-.card .card img .card .text {
+.card .text {
   padding: 0 30px 30px;
+}
+.card .text > button {
+  width: 100%;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
 }
 
 .subtituloCard {
@@ -172,18 +182,6 @@ footer {
   margin-right: 10px;
 }
 
-.card:hover {
-  background-color: #c6f5f5;
-}
-
-.card .text > button {
-  width: 100%;
-  color: white;
-  padding: 0.6rem 1.3rem;
-  text-decoration: none;
-  border: 0;
-}
-
 .portfolio-modal .modal-dialog {
   max-width: 80vw;
 }
@@ -192,16 +190,10 @@ footer {
   padding-bottom: 40px;
   text-align: center;
 }
-.portfolio-modal .modal-dialog .modal-content .modal-content h2 {
-  font: 55px/1.5 "Martel", serif;
+.portfolio-modal .modal-dialog .modal-content h2 {
+  font: 45px/1.5 "Martel", serif;
   line-height: 3rem;
 }
-
-.portfolio-modal .modal-content img {
-  margin-bottom: 15px;
-  border: 2px solid gray;
-}
-
 .portfolio-modal .modal-dialog .modal-content p {
   margin-bottom: 30px;
   font-style: italic;
@@ -211,15 +203,19 @@ footer {
   font-style: italic;
   margin-bottom: 2rem;
 }
+.portfolio-modal .modal-dialog .modal-content img {
+  margin-bottom: 15px;
+  border: 2px solid gray;
+}
 
-#portfolio {
+.portfolio {
   background: radial-gradient(
     circle,
     rgba(140, 136, 138, 0.773547) 0%,
     #363738 100%
   );
 }
-#portfolio .portfolio-item {
+.portfolio .portfolio-item {
   cursor: pointer;
   position: relative;
   display: block;
@@ -227,10 +223,10 @@ footer {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-#portfolio .portfolio-item .portfolio-item-caption:hover {
+.portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
-#portfolio
+.portfolio
   .portfolio-item
   .portfolio-item-caption:hover
   .portfolio-item-caption-content {
