@@ -1,8 +1,10 @@
 section#contacto {
-  background-color: black;
+  background: $fondo-section;
   height: auto;
   margin-bottom: 0;
   margin-top: 0;
+  padding-left: 80px;
+  padding-right: 80px;
   .section-heading {
     color: #fff;
     font: $titulo-font;
@@ -12,9 +14,10 @@ section#contacto {
 
 .page-section h3.section-subheading {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: bold;
   font: $parrafo-font;
   margin-bottom: 4rem;
+  color: white;
 }
 .page-section.section-subheading.h3 {
   @extend.page-section;
